@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+$heading_font_size: 4rem;
+$page_width: 800px;
+$back_color: lightgrey;
+
+html {
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    background-color: #555555;
+
+    a {
+        padding: .5rem;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.banner {
+    background-image: url('/img/welcome.jpg');
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 20rem;
+        text-align: center;
+        width: $page_width;
+        
+
+        h1 {
+            font-size: $heading_font_size;
+            margin-top: 3rem;
+            margin-bottom: 0;
+        }
+    
+        h2 {
+            font-size: $heading_font_size / 2;
+            margin-top: 1rem;
+            
+        }
+    }
+
+}
+
+.plot {
+    background-color: $back_color;
+    margin: 0;
+
+    h2 {
+        text-align: center;
+        padding: 1rem;
+        margin: 0;
+        font-size: 30px;
+    }
+    .container{
+        width: 800px;
+        display: flex;
+        margin: auto;
+        padding: 2rem;
+        
+
+        img {
+            width: 200px;
+            height: 300px;
+            
+        }
+
+        .content{
+            padding: 1rem;
+
+        }
+    }
+}
+
+.characters {
+
+    .container {
+        display: flex;
+        width: 800px;
+
+        img {
+            border-radius: 50%;
+            width: 50%;
+            height: auto;
+        }
+    }
+}
+
+
+
