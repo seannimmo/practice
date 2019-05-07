@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+$main_font: "Ezcar";
+
+html {
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    background-image: url('/img/got-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #666666;
+    background-blend-mode: multiply;
+    background-position: center;
+    color: white;
+    font-family: $main_font;
+    font-size: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    
+    header {
+        padding: 1rem;
+        text-align: right;
+    }
+
+    footer {
+        
+        padding: 1rem;
+    }
+}
