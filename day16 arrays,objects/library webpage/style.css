@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 18px;
+  
+}
+
+body {
+    margin: 0;
+}
+header {
+    margin: 0;
+    background-color: blue;
+    color: white;
+    font-family: sans-serif;
+    height: 5rem;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+
+}
+
+section {
+    height: 40rem;
+}
+
+.input {
+    padding: 1rem;
+}

@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+
+img {
+    background-color: blue;
+    
+}
