@@ -13,7 +13,11 @@ class Chip {
         this.y = y;
     }
 
-    render () {
-        
+    renderChip () {
+        const gameField = document.querySelector('body');
+        const newChip = document.createElement('div');
+        newChip.className = `chip ${this.color}`;
+        newChip.innerHTML = `<div>${this.value}</div>`
+        gameField.appendChild('newChip');
     }
 }
