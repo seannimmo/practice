@@ -7,6 +7,8 @@ while ($time_served < 10) {
     echo "The prisoner has served {$time_served} years.";
     echo "<br>";
 }
+echo "<br>";
+
 //// do while
 $time_served = 0;
 do {
@@ -14,12 +16,14 @@ do {
     echo "The prisoner has served {$time_served} years.";
     echo "<br>";
 } while ($time_served < 10);
+echo "<br>";
 
 ///// for
 for ($i = 0; $i < 5; $i++){
     echo "The prisoner has " . (5 - $i) . " more years to serve";
     echo "<br>";
 }
+echo "<br>";
 
 ///// continue & break
 for ($i = 10; $i > 0; $i--) {
