@@ -4,11 +4,12 @@ class Vehicle
 {
     public $wheel_count = null;
     public $color = null;
-    public $avg_speed = null;
+    public $avg_speed = 100;
     
     public function travel($distance)
     {
-        return $distance / $avg_speed;
+        
+        return $distance / $this->avg_speed;
     }
 }
 
@@ -26,6 +27,7 @@ class Horse extends Vehicle
 {
     public $wheel_count = 0;
     public $is_fed = false;
+   
 
     public function feed()
     {
@@ -33,8 +35,11 @@ class Horse extends Vehicle
     }
 }
 
+
+
 $yes = new Horse;
 $yes->feed();
+echo $yes->travel(500);
 var_dump($yes);
 
 class Address
