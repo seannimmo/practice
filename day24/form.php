@@ -16,29 +16,40 @@ var_dump($_POST);
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+
+        <style>
+            main {
+                width: 600px;
+                margin: 0 auto;
+            }
+        </style>
+        
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <form action="" method="get">
-
-            <!-- name=greeting is added to $_GET  -->
-            <input type="text" name="greeting" value="hello">
-            <input type="submit" value="Submit!">
-        </form>
-
-        
-        <form action="" method="post">
-            <input 
-                type="text" 
-                name="author" 
-                value="<?= isset($_POST['author']) ? $_POST['author'] : ''?>">
-            <textarea name="text" id='' cols='30'></textarea>
-            <input type="submit" value="Submit!">
-        </form>
-
-        
+    
+       <main>
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+            <form action="" method="get">
+    
+                <!-- name=greeting is added to $_GET  -->
+                <input type="text" name="greeting" value="hello">
+                <input type="submit" value="Submit!">
+            </form>
+    
+            
+            <form action="" method="post">
+                <input 
+                    type="text" 
+                    name="author" 
+                    value="<?= isset($_POST['author']) ? $_POST['author'] : ''?>">
+                <textarea name="text" id='' cols='30'></textarea>
+                <input type="submit" value="Submit!">
+            </form>
+    
+            
+       </main>
         <script src="" async defer></script>
     </body>
 </html>
