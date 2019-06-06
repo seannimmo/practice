@@ -1,0 +1,18 @@
+Student
+-=------
+id: UNSIGNED INT(11)
+
+First_name: short string;
+Last_name: short string VARCHAR(127)
+Birthday: date DATE
+age: integer
+grade: integer
+address: integer and short string
+nationality: short string VARCHAR(127)
+is present: TINYINT(1)
+class time: TIME
+email: VARCHAR(127)
+gender: VARCHAR(32)
+
+
+
