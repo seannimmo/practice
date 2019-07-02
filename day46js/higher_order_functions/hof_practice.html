@@ -1,0 +1,123 @@
+<script>
+const numbers = [15, 4, 11, 27, 56, 10, 4, 7, 14, 25, 66, 33];
+const users = ['martha', 'eve', 'johnny', 'thedude', 'onyxx', 'dagesus', 'duckling44'];
+const furniture = [
+  {
+    name: 'Table',
+    price: 100,
+    available: true,
+  },
+  {
+    name: 'Chair',
+    price: 20,
+    available: false,
+  },
+  {
+    name: 'Bookshelf',
+    price: 55,
+    available: true,
+  },
+  {
+    name: 'Sofa',
+    price: 1200,
+    available: true,
+  },
+  {
+    name: 'Coffeetable',
+    price: 45,
+    available: false,
+  },
+  {
+    name: 'Bed',
+    price: 800,
+    available: false,
+  },
+  {
+    name: 'Nightstand',
+    price: 12,
+    available: true,
+  },
+];
+
+// Mapping:
+// Compute how far are all the values in numbers from the value 13.
+let result = numbers.map(val => val - 13);
+
+// Compute square roots of all the values in numbers.
+result = numbers.map(val => Math.sqrt(val));
+
+// Compute the lengths of all the usernames in users.
+result = users.map(name => name.length)
+
+// Create an array of 'li' DOM elements each containing a name from users.
+result = users.map(name => '<li>' + name + '</li>');
+
+// Get all the prices of all the pieces of furniture.
+result = furniture.map(piece => piece.price);
+
+// Filtering:
+// Get only odd numbers from the array numbers.
+result = numbers.filter(num => num % 2 === 1)
+
+// Get an array of only those pieces of furniture which are cheaper then 120 dollars.
+result = furniture.filter(piece => piece.price > 120)
+
+// Get an array of available pieces of furniture.
+result = furniture.filter(piece => piece.available == true);
+
+// Reducing
+// Turn the numbers array into a long string of all those numbers.
+result = numbers.reduce((x, y) => x + ', ' + y,);
+// Sum all the prices of all the furniture items.
+result = furniture.reduce((x, y) => x + y.price, 0);
+console.log(result);
+
+// Turn the array of furniture objects into a count of how many items are available.
+result = furniture.filter(x => x.available == true).reduce((x, y) => x + 1, 0);
+// Given an array of potential voters, return an object representing the results of the vote. Include how many of the potential voters were in the ages 18-25, how many from 26-35, how many from 36-55, and how many of each of those age ranges actually voted. The resulting object containing this data should have 6 properties. See the example output at the bottom.
+
+console.log(result);
+
+const voters = [
+  {name:'Bob' , age: 30, voted: true},
+  {name:'Jake' , age: 32, voted: true},
+  {name:'Kate' , age: 25, voted: false},
+  {name:'Sam' , age: 20, voted: false},
+  {name:'Phil' , age: 21, voted: true},
+  {name: 'Ed'  , age: 55, voted: true},
+  {name:'Tami' , age: 54, voted: true},
+  {name: 'Mary', age: 31, voted: false},
+  {name: 'Becky', age: 43, voted: false},
+  {name: 'Joey', age: 41, voted: true},
+  {name: 'Jeff', age: 30, voted: true},
+  {name: 'Zack', age: 19, voted: false}
+];
+ 
+const voterResults = (arr) => {
+  const youth = voters.filter(ppl => ppl.age < 26);
+  const mid = voters.filter(ppl => ppl.age < 36 && ppl.age > 25);
+  const old = voters.filter(ppl => ppl.age > 35);
+  votes = {
+    youngVotes: youth.filter(ppl => ppl.voted == true).reduce((x, y) => x + 1, 0),
+    youth: youth.reduce((x, y) => x + 1, 0),
+    midVotes: mid.filter(mid => mid.voted == true).reduce((x, y) => x + 1, 0),
+    mids: mid.reduce((x, y) => x + 1, 0),
+    oldVotes: mid.filter(old => old.voted == true).reduce((x, y) => x + 1, 0),
+    olds: old.reduce((x, y) => x + 1, 0)
+  }
+  return votes;
+}
+ 
+console.log(voterResults(voters)); // Returned value shown below:
+/*
+{ 
+  youngVotes: 1,
+  youth: 4,
+  midVotes: 3,
+  mids: 4,
+  oldVotes: 3,
+  olds: 4 
+}
+*/
+
+</script>

@@ -1,0 +1,28 @@
+<script>
+    [1,2,3,4,5].forEach(item => console.log(item));
+
+    const values = [13.5, 12.1, 10.9, 16.3, 12.3, 11.4]
+
+    const result = [];
+    values.forEach(item => result.push(Math.round(item)));
+    console.log(result);
+
+    //map is similar, but creates a new array on its own.
+    const results = values.map(val => Math.round(val));
+    console.log(results)
+
+    //filter returns a boolean and adds only those that are true to a new array.
+    const filt = values.filter(val => val > 13);
+    console.log(filt)
+
+    //reduce takes first two items (x and y), does something to them, and then takes the result and places it in x. 
+    const red = values.reduce((x, y) => x * y);
+    console.log(red);
+
+    // ... is the spread operator
+    const x = [3, 2, 1];
+    [4, ...x]
+    
+
+
+</script>
