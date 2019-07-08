@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+#app {
+    width: 800px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: auto;
+
+}

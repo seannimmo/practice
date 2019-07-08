@@ -1,0 +1,21 @@
+.chapter {
+    display: flex;
+    margin: .5rem;
+    padding: 1rem;
+
+}
+.chapter__date {
+    background-color: orange;
+    width: 5rem;
+    height: 5rem;
+    
+}
+
+.chapter__info {
+    width: 80%;
+    margin-left: 1rem;
+}
+
+.title {
+    font-weight: bold;
+}

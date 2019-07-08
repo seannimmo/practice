@@ -45,7 +45,7 @@ class App extends Component {
     handleClick = (contactName, isTrue) => {
         console.log(`i'm clicking something ${contactName}`)
         this.setState(prevState => {
-            isClicked: prevState.people.map((person, index) => {
+            prevState.people.map((person, index) => {
                 if(contactName === person.name){
                     person.isClicked = true;
                     return person.isClicked
